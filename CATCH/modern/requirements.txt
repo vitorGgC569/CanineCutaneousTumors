@@ -1,0 +1,12 @@
+torch>=1.7.0
+torchvision>=0.8.0
+timm>=0.4.12
+openslide-python
+torchstain
+opencv-python
+pandas
+h5py
+einops
+scikit-learn
+matplotlib
+tqdm
