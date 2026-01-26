@@ -1,0 +1,351 @@
+Slide;Dataset;Scanner
+Histiocytoma_01_1.svs;train;ScanScope v1
+Histiocytoma_02_1.svs;val;ScanScope v1
+Histiocytoma_03_1.svs;test;ScanScope v1
+Histiocytoma_04_1.svs;train;ScanScope v1
+Histiocytoma_05_1.svs;val;ScanScope v1
+Histiocytoma_06_1.svs;train;ScanScope v1
+Histiocytoma_07_1.svs;test;ScanScope v1
+Histiocytoma_08_1.svs;train;ScanScope v1
+Histiocytoma_09_1.svs;test;ScanScope v1
+Histiocytoma_10_1.svs;train;ScanScope v1
+Histiocytoma_11_1.svs;train;ScanScope v1
+Histiocytoma_12_1.svs;train;ScanScope v1
+Histiocytoma_13_1.svs;train;ScanScope v1
+Histiocytoma_14_1.svs;test;ScanScope v1
+Histiocytoma_15_1.svs;test;ScanScope v1
+Histiocytoma_16_1.svs;test;ScanScope v1
+Histiocytoma_17_1.svs;train;ScanScope v1
+Histiocytoma_18_1.svs;test;ScanScope v1
+Histiocytoma_19_1.svs;train;ScanScope v1
+Histiocytoma_20_1.svs;train;AT2
+Histiocytoma_21_1.svs;train;AT2
+Histiocytoma_21_2.svs;train;AT2
+Histiocytoma_22_1.svs;train;AT2
+Histiocytoma_23_1.svs;test;AT2
+Histiocytoma_24_1.svs;train;AT2
+Histiocytoma_25_1.svs;train;AT2
+Histiocytoma_26_1.svs;test;AT2
+Histiocytoma_26_2.svs;test;AT2
+Histiocytoma_27_1.svs;train;AT2
+Histiocytoma_28_1.svs;train;ScanScope v1
+Histiocytoma_29_1.svs;val;ScanScope v1
+Histiocytoma_30_1.svs;train;ScanScope v1
+Histiocytoma_31_1.svs;train;ScanScope v1
+Histiocytoma_32_1.svs;train;ScanScope v1
+Histiocytoma_33_1.svs;train;ScanScope v1
+Histiocytoma_34_1.svs;train;ScanScope v1
+Histiocytoma_35_1.svs;train;ScanScope v1
+Histiocytoma_36_1.svs;train;ScanScope v1
+Histiocytoma_37_1.svs;train;ScanScope v1
+Histiocytoma_38_1.svs;train;ScanScope v1
+Histiocytoma_39_1.svs;train;AT2
+Histiocytoma_40_1.svs;train;AT2
+Histiocytoma_41_1.svs;train;AT2
+Histiocytoma_42_1.svs;val;AT2
+Histiocytoma_43_1.svs;train;AT2
+Histiocytoma_44_1.svs;train;AT2
+Histiocytoma_45_1.svs;train;AT2
+Histiocytoma_46_1.svs;val;AT2
+Histiocytoma_47_1.svs;train;ScanScope v1
+Histiocytoma_48_1.svs;train;AT2
+MCT_01_1.svs;test;ScanScope v1
+MCT_02_1.svs;train;ScanScope v1
+MCT_02_2.svs;train;ScanScope v1
+MCT_03_1.svs;train;ScanScope v1
+MCT_04_1.svs;train;ScanScope v1
+MCT_04_2.svs;train;ScanScope v1
+MCT_05_1.svs;train;ScanScope v1
+MCT_05_2.svs;train;ScanScope v1
+MCT_06_1.svs;train;ScanScope v1
+MCT_06_2.svs;train;ScanScope v1
+MCT_07_1.svs;test;ScanScope v1
+MCT_08_1.svs;train;ScanScope v1
+MCT_09_1.svs;train;ScanScope v1
+MCT_10_1.svs;test;ScanScope v1
+MCT_11_1.svs;train;ScanScope v1
+MCT_12_1.svs;train;ScanScope v1
+MCT_13_1.svs;train;ScanScope v1
+MCT_14_1.svs;train;ScanScope v1
+MCT_15_1.svs;test;ScanScope v1
+MCT_16_1.svs;val;ScanScope v1
+MCT_17_1.svs;train;ScanScope v1
+MCT_18_1.svs;train;ScanScope v1
+MCT_19_1.svs;val;ScanScope v1
+MCT_20_1.svs;train;ScanScope v1
+MCT_21_1.svs;train;ScanScope v1
+MCT_22_1.svs;train;ScanScope v1
+MCT_23_1.svs;train;ScanScope v1
+MCT_24_1.svs;train;ScanScope v1
+MCT_25_1.svs;val;ScanScope v1
+MCT_26_1.svs;train;ScanScope v1
+MCT_26_2.svs;train;ScanScope v1
+MCT_27_1.svs;train;ScanScope v1
+MCT_28_1.svs;train;ScanScope v1
+MCT_29_1.svs;test;ScanScope v1
+MCT_30_1.svs;test;ScanScope v1
+MCT_31_1.svs;train;ScanScope v1
+MCT_32_1.svs;train;ScanScope v1
+MCT_33_1.svs;train;ScanScope v1
+MCT_34_1.svs;train;ScanScope v1
+MCT_35_1.svs;train;ScanScope v1
+MCT_36_1.svs;train;ScanScope v1
+MCT_37_1.svs;train;ScanScope v1
+MCT_38_1.svs;test;ScanScope v1
+MCT_39_1.svs;test;ScanScope v1
+MCT_40_1.svs;val;ScanScope v1
+MCT_41_1.svs;test;ScanScope v1
+MCT_42_1.svs;train;ScanScope v1
+MCT_43_1.svs;val;ScanScope v1
+MCT_44_1.svs;train;ScanScope v1
+MCT_45_1.svs;test;ScanScope v1
+Melanoma_01_1.svs;test;ScanScope v1
+Melanoma_02_1.svs;train;ScanScope v1
+Melanoma_03_1.svs;val;ScanScope v1
+Melanoma_03_2.svs;val;ScanScope v1
+Melanoma_04_1.svs;train;ScanScope v1
+Melanoma_05_1.svs;train;ScanScope v1
+Melanoma_06_1.svs;train;ScanScope v1
+Melanoma_06_2.svs;train;ScanScope v1
+Melanoma_07_1.svs;train;ScanScope v1
+Melanoma_08_1.svs;test;ScanScope v1
+Melanoma_09_1.svs;val;ScanScope v1
+Melanoma_10_1.svs;test;ScanScope v1
+Melanoma_11_1.svs;test;ScanScope v1
+Melanoma_12_1.svs;train;AT2
+Melanoma_13_1.svs;train;ScanScope v1
+Melanoma_14_1.svs;train;ScanScope v1
+Melanoma_15_1.svs;train;ScanScope v1
+Melanoma_15_2.svs;train;ScanScope v1
+Melanoma_16_1.svs;train;ScanScope v1
+Melanoma_16_2.svs;train;ScanScope v1
+Melanoma_16_3.svs;train;ScanScope v1
+Melanoma_16_4.svs;train;ScanScope v1
+Melanoma_16_5.svs;train;ScanScope v1
+Melanoma_16_6.svs;train;ScanScope v1
+Melanoma_17_1.svs;train;ScanScope v1
+Melanoma_18_1.svs;train;ScanScope v1
+Melanoma_19_1.svs;train;ScanScope v1
+Melanoma_19_2.svs;train;ScanScope v1
+Melanoma_20_1.svs;test;ScanScope v1
+Melanoma_21_1.svs;train;ScanScope v1
+Melanoma_22_1.svs;train;ScanScope v1
+Melanoma_23_1.svs;train;ScanScope v1
+Melanoma_24_1.svs;val;ScanScope v1
+Melanoma_25_1.svs;train;ScanScope v1
+Melanoma_26_1.svs;train;ScanScope v1
+Melanoma_27_1.svs;test;AT2
+Melanoma_27_2.svs;test;AT2
+Melanoma_28_1.svs;train;ScanScope v1
+Melanoma_28_2.svs;train;ScanScope v1
+Melanoma_29_1.svs;train;ScanScope v1
+Melanoma_30_1.svs;train;ScanScope v1
+Melanoma_31_1.svs;test;ScanScope v1
+Melanoma_32_1.svs;test;ScanScope v1
+Melanoma_33_1.svs;train;ScanScope v1
+Melanoma_33_2.svs;train;ScanScope v1
+Melanoma_34_1.svs;test;ScanScope v1
+Melanoma_35_1.svs;train;ScanScope v1
+Melanoma_35_2.svs;train;ScanScope v1
+Melanoma_36_1.svs;train;ScanScope v1
+Melanoma_37_1.svs;val;AT2
+Plasmacytoma_01_1.svs;train;ScanScope v1
+Plasmacytoma_02_1.svs;train;ScanScope v1
+Plasmacytoma_03_1.svs;train;ScanScope v1
+Plasmacytoma_04_1.svs;train;ScanScope v1
+Plasmacytoma_05_1.svs;val;ScanScope v1
+Plasmacytoma_06_1.svs;train;ScanScope v1
+Plasmacytoma_07_1.svs;train;ScanScope v1
+Plasmacytoma_08_1.svs;train;ScanScope v1
+Plasmacytoma_09_1.svs;train;AT2
+Plasmacytoma_10_1.svs;train;ScanScope v1
+Plasmacytoma_11_1.svs;train;ScanScope v1
+Plasmacytoma_12_1.svs;test;ScanScope v1
+Plasmacytoma_13_1.svs;train;ScanScope v1
+Plasmacytoma_14_1.svs;test;ScanScope v1
+Plasmacytoma_15_1.svs;val;ScanScope v1
+Plasmacytoma_16_1.svs;test;ScanScope v1
+Plasmacytoma_17_1.svs;train;AT2
+Plasmacytoma_18_1.svs;test;ScanScope v1
+Plasmacytoma_19_1.svs;val;ScanScope v1
+Plasmacytoma_20_1.svs;train;AT2
+Plasmacytoma_21_1.svs;test;ScanScope v1
+Plasmacytoma_21_2.svs;test;ScanScope v1
+Plasmacytoma_22_1.svs;train;ScanScope v1
+Plasmacytoma_22_2.svs;train;ScanScope v1
+Plasmacytoma_23_1.svs;val;ScanScope v1
+Plasmacytoma_24_1.svs;train;ScanScope v1
+Plasmacytoma_25_1.svs;train;ScanScope v1
+Plasmacytoma_26_1.svs;test;ScanScope v1
+Plasmacytoma_26_2.svs;test;ScanScope v1
+Plasmacytoma_27_1.svs;train;ScanScope v1
+Plasmacytoma_28_1.svs;train;AT2
+Plasmacytoma_29_1.svs;train;ScanScope v1
+Plasmacytoma_29_2.svs;train;ScanScope v1
+Plasmacytoma_30_1.svs;test;ScanScope v1
+Plasmacytoma_31_1.svs;train;ScanScope v1
+Plasmacytoma_32_1.svs;train;ScanScope v1
+Plasmacytoma_33_1.svs;train;ScanScope v1
+Plasmacytoma_34_1.svs;test;ScanScope v1
+Plasmacytoma_35_1.svs;val;ScanScope v1
+Plasmacytoma_36_1.svs;train;ScanScope v1
+Plasmacytoma_37_1.svs;train;ScanScope v1
+Plasmacytoma_38_1.svs;train;ScanScope v1
+Plasmacytoma_39_1.svs;train;ScanScope v1
+Plasmacytoma_40_1.svs;train;AT2
+Plasmacytoma_41_1.svs;train;ScanScope v1
+Plasmacytoma_42_1.svs;train;AT2
+Plasmacytoma_43_1.svs;train;ScanScope v1
+Plasmacytoma_44_1.svs;train;ScanScope v1
+Plasmacytoma_45_1.svs;train;ScanScope v1
+Plasmacytoma_46_1.svs;train;AT2
+PNST_01_1.svs;train;ScanScope v1
+PNST_02_1.svs;train;ScanScope v1
+PNST_02_2.svs;train;ScanScope v1
+PNST_03_1.svs;test;ScanScope v1
+PNST_03_2.svs;test;ScanScope v1
+PNST_04_1.svs;train;ScanScope v1
+PNST_04_2.svs;train;ScanScope v1
+PNST_05_1.svs;test;ScanScope v1
+PNST_06_1.svs;test;ScanScope v1
+PNST_06_2.svs;test;ScanScope v1
+PNST_07_1.svs;train;ScanScope v1
+PNST_08_1.svs;train;ScanScope v1
+PNST_09_1.svs;val;ScanScope v1
+PNST_10_1.svs;train;ScanScope v1
+PNST_10_2.svs;train;ScanScope v1
+PNST_10_3.svs;train;ScanScope v1
+PNST_11_1.svs;test;ScanScope v1
+PNST_12_1.svs;train;ScanScope v1
+PNST_13_1.svs;train;ScanScope v1
+PNST_13_2.svs;train;ScanScope v1
+PNST_13_3.svs;train;ScanScope v1
+PNST_14_1.svs;train;ScanScope v1
+PNST_15_1.svs;train;ScanScope v1
+PNST_15_2.svs;train;ScanScope v1
+PNST_16_1.svs;train;ScanScope v1
+PNST_16_2.svs;train;ScanScope v1
+PNST_17_1.svs;train;ScanScope v1
+PNST_17_2.svs;train;ScanScope v1
+PNST_18_1.svs;train;ScanScope v1
+PNST_19_1.svs;val;ScanScope v1
+PNST_19_2.svs;val;ScanScope v1
+PNST_20_1.svs;train;ScanScope v1
+PNST_21_1.svs;val;ScanScope v1
+PNST_22_1.svs;val;ScanScope v1
+PNST_23_1.svs;train;ScanScope v1
+PNST_24_1.svs;train;ScanScope v1
+PNST_25_1.svs;train;ScanScope v1
+PNST_25_2.svs;train;ScanScope v1
+PNST_26_1.svs;train;ScanScope v1
+PNST_27_1.svs;train;ScanScope v1
+PNST_28_1.svs;train;ScanScope v1
+PNST_29_1.svs;test;ScanScope v1
+PNST_29_2.svs;test;ScanScope v1
+PNST_30_1.svs;train;ScanScope v1
+PNST_30_2.svs;train;ScanScope v1
+PNST_31_1.svs;test;AT2
+PNST_32_1.svs;train;ScanScope v1
+PNST_33_1.svs;train;ScanScope v1
+PNST_34_1.svs;train;ScanScope v1
+PNST_35_1.svs;test;ScanScope v1
+SCC_01_1.svs;train;ScanScope v1
+SCC_01_2.svs;train;ScanScope v1
+SCC_02_1.svs;val;ScanScope v1
+SCC_03_1.svs;train;ScanScope v1
+SCC_03_2.svs;train;ScanScope v1
+SCC_03_3.svs;train;ScanScope v1
+SCC_04_1.svs;test;ScanScope v1
+SCC_05_1.svs;test;ScanScope v1
+SCC_06_1.svs;val;ScanScope v1
+SCC_07_1.svs;test;ScanScope v1
+SCC_08_1.svs;train;ScanScope v1
+SCC_09_1.svs;test;ScanScope v1
+SCC_10_1.svs;train;ScanScope v1
+SCC_11_1.svs;train;ScanScope v1
+SCC_12_1.svs;train;ScanScope v1
+SCC_12_2.svs;train;ScanScope v1
+SCC_12_3.svs;train;ScanScope v1
+SCC_13_1.svs;train;ScanScope v1
+SCC_14_1.svs;test;ScanScope v1
+SCC_15_1.svs;train;ScanScope v1
+SCC_16_1.svs;train;ScanScope v1
+SCC_16_2.svs;train;ScanScope v1
+SCC_17_1.svs;train;ScanScope v1
+SCC_17_2.svs;train;ScanScope v1
+SCC_17_3.svs;train;ScanScope v1
+SCC_17_4.svs;train;ScanScope v1
+SCC_18_1.svs;train;ScanScope v1
+SCC_18_2.svs;train;ScanScope v1
+SCC_19_1.svs;val;ScanScope v1
+SCC_19_2.svs;val;ScanScope v1
+SCC_20_1.svs;train;ScanScope v1
+SCC_21_1.svs;train;ScanScope v1
+SCC_21_2.svs;train;ScanScope v1
+SCC_22_1.svs;train;ScanScope v1
+SCC_23_1.svs;train;ScanScope v1
+SCC_24_1.svs;test;ScanScope v1
+SCC_24_2.svs;test;ScanScope v1
+SCC_24_3.svs;test;ScanScope v1
+SCC_25_1.svs;train;ScanScope v1
+SCC_25_2.svs;train;ScanScope v1
+SCC_26_1.svs;val;ScanScope v1
+SCC_27_1.svs;test;AT2
+SCC_28_1.svs;train;ScanScope v1
+SCC_29_1.svs;train;ScanScope v1
+SCC_30_1.svs;train;ScanScope v1
+SCC_31_1.svs;train;ScanScope v1
+SCC_31_2.svs;train;ScanScope v1
+SCC_31_3.svs;train;ScanScope v1
+SCC_32_1.svs;train;ScanScope v1
+SCC_33_1.svs;test;ScanScope v1
+Trichoblastoma_01_1.svs;train;ScanScope v1
+Trichoblastoma_02_1.svs;test;ScanScope v1
+Trichoblastoma_03_1.svs;train;ScanScope v1
+Trichoblastoma_04_1.svs;train;ScanScope v1
+Trichoblastoma_04_2.svs;train;ScanScope v1
+Trichoblastoma_05_1.svs;train;ScanScope v1
+Trichoblastoma_05_2.svs;train;ScanScope v1
+Trichoblastoma_05_3.svs;train;ScanScope v1
+Trichoblastoma_06_1.svs;test;ScanScope v1
+Trichoblastoma_07_1.svs;train;ScanScope v1
+Trichoblastoma_08_1.svs;train;ScanScope v1
+Trichoblastoma_09_1.svs;train;ScanScope v1
+Trichoblastoma_10_1.svs;test;ScanScope v1
+Trichoblastoma_10_2.svs;test;ScanScope v1
+Trichoblastoma_10_3.svs;test;ScanScope v1
+Trichoblastoma_10_4.svs;test;ScanScope v1
+Trichoblastoma_11_1.svs;test;ScanScope v1
+Trichoblastoma_12_1.svs;train;ScanScope v1
+Trichoblastoma_13_1.svs;test;ScanScope v1
+Trichoblastoma_14_1.svs;train;ScanScope v1
+Trichoblastoma_15_1.svs;train;ScanScope v1
+Trichoblastoma_15_2.svs;train;ScanScope v1
+Trichoblastoma_16_1.svs;val;ScanScope v1
+Trichoblastoma_17_1.svs;train;ScanScope v1
+Trichoblastoma_18_1.svs;test;ScanScope v1
+Trichoblastoma_19_1.svs;train;ScanScope v1
+Trichoblastoma_20_1.svs;train;ScanScope v1
+Trichoblastoma_21_1.svs;train;ScanScope v1
+Trichoblastoma_22_1.svs;train;ScanScope v1
+Trichoblastoma_23_1.svs;val;ScanScope v1
+Trichoblastoma_24_1.svs;train;ScanScope v1
+Trichoblastoma_25_1.svs;train;AT2
+Trichoblastoma_26_1.svs;train;AT2
+Trichoblastoma_27_1.svs;train;AT2
+Trichoblastoma_28_1.svs;train;AT2
+Trichoblastoma_29_1.svs;val;AT2
+Trichoblastoma_30_1.svs;train;ScanScope v1
+Trichoblastoma_31_1.svs;train;ScanScope v1
+Trichoblastoma_31_2.svs;train;ScanScope v1
+Trichoblastoma_32_1.svs;val;ScanScope v1
+Trichoblastoma_33_1.svs;train;AT2
+Trichoblastoma_33_2.svs;train;AT2
+Trichoblastoma_34_1.svs;train;AT2
+Trichoblastoma_34_2.svs;train;AT2
+Trichoblastoma_34_3.svs;train;AT2
+Trichoblastoma_35_1.svs;test;AT2
+Trichoblastoma_36_1.svs;val;AT2
+Trichoblastoma_37_1.svs;train;AT2
+Trichoblastoma_37_2.svs;train;AT2
+Trichoblastoma_38_1.svs;train;AT2
