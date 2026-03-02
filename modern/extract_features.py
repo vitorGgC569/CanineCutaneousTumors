@@ -25,8 +25,7 @@ class CTransPath(nn.Module):
 
 def get_patches(slide_path, patch_size=256, level=0):
     """
-    Simple patching function.
-    In a real scenario, use a tissue mask to filter background.
+    Generate patches filtered by Tissue Segmentation (Otsu on HSV).
     """
     try:
         slide = openslide.OpenSlide(slide_path)
@@ -35,14 +34,34 @@ def get_patches(slide_path, patch_size=256, level=0):
         return None, []
 
     w, h = slide.level_dimensions[level]
+    
+    # Generate tissue mask at a lower resolution (e.g. level 2 or 3)
+    downsample_level = min(slide.level_count - 1, 3) if slide.level_count > 1 else 0
+    mask_w, mask_h = slide.level_dimensions[downsample_level]
+    downsample_factor = w / float(mask_w) if mask_w > 0 else 1.0
+    
+    thumbnail = slide.read_region((0, 0), downsample_level, (mask_w, mask_h)).convert('RGB')
+    thumb_np = np.array(thumbnail)
+    
+    # Convert RGB to HSV and apply Otsu on Saturation channel
+    hsv = cv2.cvtColor(thumb_np, cv2.COLOR_RGB2HSV)
+    s_channel = hsv[:, :, 1]
+    _, tissue_mask = cv2.threshold(s_channel, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    
     patches = []
 
-    # Simple grid, stepping by patch_size (non-overlapping)
-    # Adding a simple background check (white space) could be done here if pixel access is fast enough,
-    # but for speed we rely on the neural net handling it or later filtering.
     for y in range(0, h, patch_size):
         for x in range(0, w, patch_size):
-            patches.append((x, y))
+            # Check mask overlapping
+            mask_x = int(x / downsample_factor)
+            mask_y = int(y / downsample_factor)
+            mask_ps = max(1, int(patch_size / downsample_factor))
+            
+            patch_mask = tissue_mask[mask_y:mask_y+mask_ps, mask_x:mask_x+mask_ps]
+            
+            # If tissue covers at least 20% of the patch area (255 * 0.20 = 51)
+            if np.mean(patch_mask) > 51.0:
+                patches.append((x, y))
 
     return slide, patches
 
@@ -65,11 +84,7 @@ class PatchDataset(Dataset):
             patch = patch.convert('RGB')
             patch_np = np.array(patch)
 
-            # Basic background check: if average brightness > 240, it's probably glass
-            if patch_np.mean() > 240:
-                # Return a dummy zero tensor or handle filtering in collate
-                # For simplicity, we process it, but in production we should filter these indices beforehand.
-                pass
+            # Basic background check removed: robust tissue filtering is now performed by Otsu pre-segmentation in get_patches.
 
             # Normalize
             if self.normalizer:

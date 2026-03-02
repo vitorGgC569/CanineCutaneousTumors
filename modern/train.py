@@ -5,9 +5,24 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
-from models.clam import CLAM_SB
+import torch.nn.functional as F
 from sklearn.metrics import balanced_accuracy_score, roc_auc_score, confusion_matrix
-from sklearn.model_selection import KFold
+from sklearn.model_selection import StratifiedKFold
+
+class FocalLoss(nn.Module):
+    def __init__(self, alpha=0.5, gamma=2.0, reduction='mean'):
+        super(FocalLoss, self).__init__()
+        self.alpha = alpha
+        self.gamma = gamma
+        self.reduction = reduction
+
+    def forward(self, inputs, targets):
+        ce_loss = F.cross_entropy(inputs, targets, reduction='none')
+        pt = torch.exp(-ce_loss)
+        focal_loss = self.alpha * (1 - pt)**self.gamma * ce_loss
+        if self.reduction == 'mean':
+            return focal_loss.mean()
+        return focal_loss
 from tqdm import tqdm
 import glob
 import random
@@ -39,9 +54,10 @@ def train_epoch(model, loader, optimizer, criterion, device):
         label = label.to(device)
 
         optimizer.zero_grad()
-        logits, Y_prob, Y_hat, _, _ = model(features)
+        logits, Y_prob, Y_hat, _, instance_loss = model(features, label=label, instance_eval=True)
 
-        loss = criterion(logits, label)
+        bag_loss = criterion(logits, label)
+        loss = bag_loss + 0.3 * instance_loss
         loss.backward()
         optimizer.step()
 
@@ -63,8 +79,10 @@ def validate(model, loader, criterion, device):
             features = features.to(device).squeeze(0)
             label = label.to(device)
 
-            logits, Y_prob, Y_hat, _, _ = model(features)
-            loss = criterion(logits, label)
+            logits, Y_prob, Y_hat, _, instance_loss = model(features, label=label, instance_eval=True)
+            
+            bag_loss = criterion(logits, label)
+            loss = bag_loss + 0.3 * instance_loss
 
             total_loss += loss.item()
             all_preds.extend(Y_hat.cpu().numpy())
@@ -117,14 +135,15 @@ def main():
 
     random.shuffle(all_data)
 
-    # K-Fold CV
-    kf = KFold(n_splits=args.k_folds, shuffle=True, random_state=args.seed)
+    # Stratified K-Fold CV guarantees label balance across folds
+    skf = StratifiedKFold(n_splits=args.k_folds, shuffle=True, random_state=args.seed)
 
     fold_results = []
 
-    print(f"\nStarting {args.k_folds}-Fold Cross-Validation...")
+    print(f"\nStarting {args.k_folds}-Fold Stratified Cross-Validation...")
 
-    for fold, (train_idx, val_idx) in enumerate(kf.split(all_data)):
+    labels = [label for _, label in all_data]
+    for fold, (train_idx, val_idx) in enumerate(skf.split(all_data, labels)):
         print(f"\n=== Fold {fold+1}/{args.k_folds} ===")
 
         train_subset = [all_data[i] for i in train_idx]
@@ -141,7 +160,7 @@ def main():
         # Initialize fresh model for each fold
         model = CLAM_SB(input_dim=args.input_dim, n_classes=2).to(device)
         optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-4)
-        criterion = nn.CrossEntropyLoss()
+        criterion = FocalLoss(alpha=0.5, gamma=2.0)
 
         best_val_acc = 0.0
 

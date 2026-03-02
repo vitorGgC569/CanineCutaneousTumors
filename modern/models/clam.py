@@ -78,10 +78,27 @@ class CLAM_SB(nn.Module):
         Y_prob = F.softmax(logits, dim=1)
         Y_hat = torch.topk(logits, 1, dim=1)[1]
 
-        # Instance-level Loss (simplified)
+        # Instance-level Clustering Loss
         instance_loss = torch.tensor(0.0).to(h.device)
-        # To fully implement CLAM loss, we'd need to sample top-k/bottom-k patches
-        # and train the instance_classifiers.
-        # For this prototype, we return the bag prediction.
+        if instance_eval and label is not None:
+            k = min(8, h.size(0)) # sample up to 8 instances as pseudo-labels
+            if k > 0:
+                _, indices = torch.sort(A, dim=1, descending=True)
+                top_indices = indices[0, :k]
+                bottom_indices = indices[0, -k:]
+                
+                top_features = h[top_indices]
+                bottom_features = h[bottom_indices]
+                
+                if label.item() == 1: # Bag is Positive
+                    top_logits = self.instance_classifiers[1](top_features)
+                    bottom_logits = self.instance_classifiers[0](bottom_features)
+                    
+                    loss_top = F.cross_entropy(top_logits, torch.ones(k, dtype=torch.long).to(h.device))
+                    loss_bottom = F.cross_entropy(bottom_logits, torch.zeros(k, dtype=torch.long).to(h.device))
+                    instance_loss = (loss_top + loss_bottom) / 2.0
+                else:                 # Bag is Negative
+                    top_logits = self.instance_classifiers[0](top_features)
+                    instance_loss = F.cross_entropy(top_logits, torch.zeros(k, dtype=torch.long).to(h.device))
 
         return logits, Y_prob, Y_hat, A, instance_loss
