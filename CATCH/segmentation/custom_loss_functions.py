@@ -50,8 +50,10 @@ class DiceLoss(nn.modules.loss._WeightedLoss):
         if self.ignore_index is not None:
             denominator[mask] = 0
         denominator = denominator.sum(0)
-        return 1-((2*(weights*numerator).sum() + eps)/(weights*denominator).sum() + eps)
-
+        
+        # Correção da Otimização Numérica: Forma canônica da Dice Loss para maior estabilidade
+        dice_score = (2. * (weights * numerator).sum() + eps) / ((weights * denominator).sum() + eps)
+        return 1 - dice_score
 
 class ComboLoss(nn.Module):
     def __init__(self, reduction='mean', loss_funcs=[FocalLoss(), DiceLoss()], loss_wts=[1, 1], ch_wts=[1, 1, 1]):

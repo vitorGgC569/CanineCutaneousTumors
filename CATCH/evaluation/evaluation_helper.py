@@ -31,6 +31,8 @@ def segmentation_inference(slide,store, patch_size, level, batch_size, learner, 
                                            in xs])
                 seg_pred = torch.softmax(learner.model(input_batch.to(device=learner.data.device)),dim=1)
                 row_temp += [s.view(s.shape[0],s.shape[1]*s.shape[2],1) for s in seg_pred]
+                del input_batch
+                del seg_pred
             row_output = fold(torch.cat(row_temp, dim=2), (patch_size,int((len(x_indices) + 1) * patch_size * overlap_factor)),
                  kernel_size=(patch_size, patch_size), stride=int(patch_size * overlap_factor)).squeeze(1)[:,:,:shape[0]]
             temp[:, int(patch_size * overlap_factor):, :] += row_output
@@ -76,6 +78,9 @@ def classification_inference(slide,store, patch_size,level,batch_size, learner, 
                     classification_results[int(i[1]//patch_size), int(i[0]//patch_size)] = torch.argmax(clas_pred, dim=1)[j].cpu()
                 except:
                     continue
+            del input_batch
+            del clas_pred
+            torch.cuda.empty_cache()
 
 def segmentation_cm_matrix(slide_container, prediction, classes):
     cm = np.zeros((classes,classes))
