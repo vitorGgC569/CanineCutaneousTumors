@@ -6,7 +6,7 @@ fastai==1.0.61
 numpy==1.17.3
 h5py==2.10.0
 openslide_python==1.1.2
-tqdm==4.49.0
+tqdm==4.67.3
 EXCAT_Sync==0.0.16
 scikit_learn==0.24.2
 SlideRunner==2.0
