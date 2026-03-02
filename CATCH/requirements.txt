@@ -9,4 +9,4 @@ openslide_python==1.1.2
 tqdm==4.49.0
 EXCAT_Sync==0.0.16
 scikit_learn==0.24.2
-SlideRunner==2.0
+SlideRunner==2.2.0
