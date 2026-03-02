@@ -1,5 +1,5 @@
 # --------- ESTÁGIO DE CONSTRUÇÃO (BUILDER) ---------
-FROM python:3.9-slim as builder
+FROM python:3.14-slim as builder
 
 # Variáveis de ambiente para o instalador e Python
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -30,7 +30,7 @@ COPY modern/requirements.txt /app/modern/requirements.txt
 RUN pip install --no-cache-dir -r /app/modern/requirements.txt
 
 # --------- ESTÁGIO FINAL (RUNTIME) ---------
-FROM python:3.9-slim
+FROM python:3.14-slim
 
 # Variáveis de ambiente para execução
 ENV PYTHONDONTWRITEBYTECODE=1
