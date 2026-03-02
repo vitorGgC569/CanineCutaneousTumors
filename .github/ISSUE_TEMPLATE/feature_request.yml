@@ -1,0 +1,29 @@
+name: Feature Request / Proposta de Melhoria
+description: Proponha uma nova técnica de patologia computacional, nova função de perda ou modernização SOTA.
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees:
+  - vitorGgC569
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por ajudar a evoluir técnica e cientificamente o diagnóstico automatizado do CATCH!
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Descrição da Melhoria
+      description: Uma descrição clara de qual gargalo sua nova abordagem ou arquitetura de IA visa solucionar.
+    validations:
+      required: true
+  - type: textarea
+    id: literature
+    attributes:
+      label: Referencial Teórico ou Literatura
+      description: Link para o paper acadêmico ou projeto provando a escalabilidade matemática da proposta (ex: Transformer, MIL, etc).
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto Adicional
+      description: Qualquer outro contexto de engenharia de software ou DevOps necessário.

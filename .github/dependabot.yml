@@ -1,0 +1,34 @@
+version: 2
+updates:
+  # Maintain dependencies for Python CATCH baseline
+  - package-ecosystem: "pip"
+    directory: "/CATCH"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 5
+
+  # Maintain dependencies for Python Modern MIL Architecture
+  - package-ecosystem: "pip"
+    directory: "/modern"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 5
+
+  # Maintain Docker base images in Dockerfile
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "docker"

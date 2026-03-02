@@ -1,0 +1,44 @@
+name: CI Python Analysis
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-and-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10"]
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: 'pip' # caching pip dependencies
+
+    - name: Install Linting Tools
+      run: |
+        python -m pip install --upgrade pip
+        pip install ruff black flake8 pytest
+
+    - name: Check code formatting with Black
+      run: |
+        # Verifica formatação, sem quebrar a build (apenas warning)
+        black --check --diff . || echo "Black formatting issues found."
+
+    - name: Lint with Ruff
+      run: |
+        # Executa análise estática rápida apontando complexidade falhas semânticas
+        ruff check .
+
+    - name: Dry Run Syntax Check (Flake8)
+      run: |
+        # Checa erros severos de sintaxe do Python que param compilação F7/F8/E9
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics

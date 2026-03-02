@@ -1,0 +1,38 @@
+name: Bug Report / Problema Reportado
+description: Reporte um bug ou erro computacional identificado nos algoritmos do OXTA-Pathology.
+title: "[BUG] "
+labels: ["bug"]
+assignees:
+  - vitorGgC569
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por contribuir com a pesquisa do OXTA-Pathology! Descreva detalhadamente o vazamento de memória, erro matemático ou falha de inferência encontrada.
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Descrição do Bug
+      description: Uma explicação clara e concisa do problema.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Como reproduzir o erro
+      description: Passos exatos para provocar o erro, incluindo datasets usados ou arquitetura em que rodou.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Comportamento Esperado
+      description: O que você esperava que acontecesse matematicamente ou processualmente.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Especifique o sistema operacional, versão do PyTorch e se usou o Docker Multi-Stage nativo.
+    validations:
+      required: true
