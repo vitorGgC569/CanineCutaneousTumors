@@ -1,4 +1,4 @@
-Shapely==1.7.1
+Shapely==2.1.2
 opencv_python_headless==4.4.0.46
 pandas==1.1.2
 torchvision==0.7.0+cu101
